@@ -8,6 +8,7 @@ int main()
     float discount = 0.0;
     int days; //will store days
     int salesTax;
+    float total = 0;
 
     cout << "Please tell me the cost per room"<<endl;
     cin >> cost;
@@ -30,12 +31,10 @@ int main()
     if(days > 3){
         discount += 0.5;
     }
-    cout << "The total cost for one room is "<< cost <<endl;
-    cout << "The discount per room is "<< discount <<endl;
-    cout << "The number of rooms booked is "<<endl;
-    cin >> noRoomsBooked;;
-    float total = (cost*noRoomsBooked)*discount;
-    cout << "The total cost of the rooms are : R"<< total <<endl;
-
-
+    cout << " The total cost for one room is "<< cost <<endl;
+    cout << " The discount per room is "<< discount*100 <<"%"<<endl;
+    cout << " The number of rooms booked is "<<endl;
+    cout << noRoomsBooked<<endl;
+    total = cost * (noRoomsBooked *discount);
+    cout << " The total cost of the rooms are : R " << total <<endl;
 }
